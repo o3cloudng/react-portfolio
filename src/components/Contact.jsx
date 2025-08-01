@@ -43,7 +43,7 @@ const Contact = () => {
             <div className='mb-4 mt-8'>
                 <FaEnvelope className='inline-block text-green-400 mr-2'></FaEnvelope>
                 <a href="mailto:olumideo2000@gmail.com" className='hover:underline'>
-                    olumideo2000@gmail.com
+                    olumideooderinde@gmail.com
                 </a>
             </div>
             <div className='mb-4'>
