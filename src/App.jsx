@@ -1,6 +1,5 @@
 
 import './App.css'
-// import './Index.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { Routes, Route, useLocation } from 'react-router-dom';
