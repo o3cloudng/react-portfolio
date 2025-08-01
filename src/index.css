@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .animate__animated.animate__bounceIn {
+    --animate_duration: 2000ms;
+} */
+:root {
+    --animate_duration: 5000ms;
+}
