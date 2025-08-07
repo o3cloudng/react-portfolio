@@ -25,3 +25,43 @@ body {
     width: 100px !important;
     display: inline;
 }
+#menu {
+    display: none;
+}
+#mobile {
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    #navbar {
+        display: none;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+    /* #mobile {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .link {
+        padding: 10px 20px;
+        width: 100%;
+        border-bottom: 1px solid #333333;
+        margin: 0px;
+        cursor: pointer;
+    }
+    .link:first-child {
+        border-top: 1px solid #333333;
+    } */
+
+}
