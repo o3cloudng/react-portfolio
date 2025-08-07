@@ -22,10 +22,10 @@ const Navbar = () => {
             <span id='menu'><img src={menuImage} /></span>
         </div>
         <div id='mobile'>
-            <Link className='link' to="/">HOME</Link>
-            <Link className='link' to="/about">ABOUT</Link>
-            <Link className='link' to="/service">SERVICES</Link>
-            <Link className='link' to="/project">PROJECTS</Link>
+            <Link className='link' to="/">HOME</Link> - 
+            <Link className='link' to="/about">ABOUT</Link> - 
+            <Link className='link' to="/service">SERVICES</Link> - 
+            <Link className='link' to="/project">PROJECTS</Link> - 
             <Link className='link' to="/contact">CONTACT</Link>
         </div>
     </nav>

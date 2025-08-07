@@ -42,18 +42,22 @@ body {
     }
 
     #menu {
-        display: block;
+        display: none;
         position: absolute;
         top: 30px;
         right: 20px;
     }
-    /* #mobile {
+    #mobile {
         display: block;
         display: flex;
-        flex-direction: column;
-        padding: 0px;
+        /* flex-direction: column; */
+        padding-right: 5px;
+        margin-top: 10px;
     }
     .link {
+        cursor: pointer;
+    }
+    /* .link {
         padding: 10px 20px;
         width: 100%;
         border-bottom: 1px solid #333333;
