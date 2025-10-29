@@ -1,8 +1,8 @@
 import React from "react";
 import lasimraImage from "../assets/projects/lasimra.png";
-import PayMyBills from "../assets/projects/paymybills.png";
+import payMyBills from "../assets/projects/paymybills.png";
 import backUpCash from "../assets/projects/sfsbackupcash.png";
-import PrimaryButton from './Button'
+import PrimaryButton from './Button';
 
 const projects = [
   {
@@ -16,7 +16,7 @@ const projects = [
     id: 2,
     name: "PaymyBills - Utility Bills",
     technologies: "Laravel, Blade",
-    image: PayMyBills,
+    image: payMyBills,
     github: "https://github.com/YouafKhan1",
   },
   {
