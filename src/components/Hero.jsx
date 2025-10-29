@@ -11,7 +11,7 @@ const Hero = () => {
         transition-transform duration-300 hover:scale-105'/>
         <h1 className='text-4xl font-bold'>
             I'm {" "}
-            <span >Olumide Oderinde</span> <br/>
+            <span >Olumide</span> <br/>
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500'><Typewriter options={{
               strings: ['Full-Stack', 'Frontend', 'Backend', 'DevOps', 'Cloud'],
               autoStart: true,
