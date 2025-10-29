@@ -1,6 +1,6 @@
 import React from "react";
 import lasimraImage from "../assets/projects/lasimra.png";
-import PayMyBills from "../assets/projects/PayMyBills.png";
+import PayMyBills from "../assets/projects/paymybills.png";
 import backUpCash from "../assets/projects/sfsbackupcash.png";
 import PrimaryButton from './Button'
 
