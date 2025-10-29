@@ -1,28 +1,29 @@
 import React from "react";
-import employeeMSImage from "../assets/employee-ms.png";
-import bookMSImage from "../assets/admin-dashboard.png";
+import lasimraImage from "../assets/projects/lasimra.png";
+import PayMyBills from "../assets/projects/PayMyBills.png";
+import backUpCash from "../assets/projects/sfsbackupcash.png";
 import PrimaryButton from './Button'
 
 const projects = [
   {
     id: 1,
-    name: "Employee MS",
-    technologies: "MERN Stack",
-    image: employeeMSImage,
-    github: "https://github.com/YouafKhan1",
+    name: "Infrastructure Tax Collection",
+    technologies: "Django, HTMX, Tailwindcss, jinja2",
+    image: lasimraImage,
+    github: "https://lasimra.maxvaafrica.com/clients",
   },
   {
     id: 2,
-    name: "Blog App",
-    technologies: "MERN Stack",
-    image: bookMSImage,
+    name: "PaymyBills - Utility Bills",
+    technologies: "Laravel, Blade",
+    image: PayMyBills,
     github: "https://github.com/YouafKhan1",
   },
   {
     id: 3,
-    name: "Book MS",
-    technologies: "MERN Stack",
-    image: employeeMSImage,
+    name: "Backup Cash",
+    technologies: "Laravel, React",
+    image: backUpCash,
     github: "https://github.com/YouafKhan1",
   },
 ];
