@@ -1,35 +1,59 @@
-import React from 'react'
-import PrimaryButton from './Button'
-import menuImage from '../assets/menu.svg'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react'; // lightweight icons
+import PrimaryButton from './Button';
 
 const Navbar = () => {
-  return (
-    <nav className='bg-black fixed w-full z-50 top-0 shadow-lg p-4 text-white px-8 md:px-16 lg:px-24'>
-        <div className='container py-2 flex justify-center md:justify-between items-center'>
-            <div className='text-2xl font-bold'>
-            <Link to="/"><span className='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500'>My Portfolio</span></Link>
-              </div>
-            <div className='space-x-6' id='navbar'>
-                <Link to="/">HOME</Link>
-                <Link to="/about">ABOUT</Link>
-                <Link to="/service">SERVICES</Link>
-                <Link to="/project">PROJECTS</Link>
-                <Link to="/contact">CONTACT</Link>
-            </div>
-            
-            <PrimaryButton to="/contact">CONNECT ME</PrimaryButton>
-            <span id='menu'><img src={menuImage} /></span>
-        </div>
-        <div id='mobile'>
-            <Link className='link' to="/">HOME</Link> - 
-            <Link className='link' to="/about">ABOUT</Link> - 
-            <Link className='link' to="/service">SERVICES</Link> - 
-            <Link className='link' to="/project">PROJECTS</Link> - 
-            <Link className='link' to="/contact">CONTACT</Link>
-        </div>
-    </nav>
-  )
-}
+  const [menuOpen, setMenuOpen] = useState(false);
 
-export default Navbar
+  return (
+    <nav className="bg-black fixed w-full z-50 top-0 shadow-lg text-white">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="text-2xl font-bold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+              My Portfolio
+            </span>
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="hover:text-green-400">HOME</Link>
+            <Link to="/about" className="hover:text-green-400">ABOUT</Link>
+            <Link to="/service" className="hover:text-green-400">SERVICES</Link>
+            <Link to="/project" className="hover:text-green-400">PROJECTS</Link>
+            <PrimaryButton to="/contact">CONNECT ME</PrimaryButton>
+          </div>
+
+          {/* Mobile Menu Icon */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="focus:outline-none text-white"
+            >
+              {menuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      <div
+        className={`md:hidden bg-black transition-all duration-300 ease-in-out ${
+          menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+        }`}
+      >
+        <div className="flex flex-col items-center space-y-4 py-6">
+          <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-green-400">HOME</Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-green-400">ABOUT</Link>
+          <Link to="/service" onClick={() => setMenuOpen(false)} className="hover:text-green-400">SERVICES</Link>
+          <Link to="/project" onClick={() => setMenuOpen(false)} className="hover:text-green-400">PROJECTS</Link>
+          <PrimaryButton to="/contact">CONNECT ME</PrimaryButton>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
