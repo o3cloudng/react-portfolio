@@ -8,14 +8,16 @@ const Navbar = () => {
 
   return (
     <nav className="bg-black fixed w-full z-50 top-0 shadow-lg text-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-        <div className="flex justify-between items-center h-16">
+      <div className="px-6 md:px-12 sm:px-2 sm:max-w-10xl lg:px-20">
+        <div className="flex justify-between items-center sm:items-justfy-between sm:justfy-between h-16">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-              My Portfolio
-            </span>
-          </Link>
+          <div>
+            <Link to="/" className="text-2xl font-bold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+                My Portfolio
+              </span>
+            </Link>
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
@@ -23,6 +25,7 @@ const Navbar = () => {
             <Link to="/about" className="hover:text-green-400">ABOUT</Link>
             <Link to="/service" className="hover:text-green-400">SERVICES</Link>
             <Link to="/project" className="hover:text-green-400">PROJECTS</Link>
+            {/* <Link to="/contact" className="hover:text-green-400">CONTACT</Link> */}
             <PrimaryButton to="/contact">CONNECT ME</PrimaryButton>
           </div>
 
@@ -49,6 +52,7 @@ const Navbar = () => {
           <Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-green-400">ABOUT</Link>
           <Link to="/service" onClick={() => setMenuOpen(false)} className="hover:text-green-400">SERVICES</Link>
           <Link to="/project" onClick={() => setMenuOpen(false)} className="hover:text-green-400">PROJECTS</Link>
+          <Link to="/contact" onClick={() => setMenuOpen(false)} className="hover:text-green-400">CONTACT</Link>
           <PrimaryButton to="/contact">CONNECT ME</PrimaryButton>
         </div>
       </div>
