@@ -14,7 +14,7 @@ const Navbar = () => {
           <div>
             <Link to="/" className="text-2xl font-bold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                My Portfolio
+                Olumide O.
               </span>
             </Link>
           </div>
